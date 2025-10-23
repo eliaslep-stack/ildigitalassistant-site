@@ -26,8 +26,15 @@
     <a href="https://chat.openai.com/g/YOUR-CUSTOM-GPT-LINK" class="btn" target="_blank">Άνοιγμα GPT</a>
   </main>
 
-  <footer>
-    <p>© 2025 IL Digital Assistant</p>
-  </footer>
+      <footer>
+        <p>© <span id="year"></span> IL Digital Assistant</p>
+    </footer>
+
+    <script>
+        // Εμφάνιση του τρέχοντος έτους αυτόματα
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
+
