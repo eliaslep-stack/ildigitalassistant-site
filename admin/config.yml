@@ -2,6 +2,19 @@ backend:
   name: github
   repo: eliaslep-stack/ildigitalassistant-site
   branch: main
-  client_id: Ov23liNXYufwdJX6brMP
+  client_id: Ov23iINXYufwdJX6brMP
   base_url: https://oauth.ildigitalassistant.com
   auth_endpoint: /api/auth
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Σελίδες"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string" }
+      - { label: "Κείμενο", name: "body", widget: "markdown" }
