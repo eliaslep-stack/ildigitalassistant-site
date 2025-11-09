@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: eliaslep-stack/ildigitalassistant-site
+  branch: main
+  base_url: https://oauth.ildigitalassistant.com
+  auth_endpoint: /auth
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+i18n:
+  structure: multiple_folders
+  locales: [el, en]
+  default_locale: el
+
+collections:
+  - name: "pages"
+    label: "Σελίδες"
+    folder: "content/pages"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string", i18n: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Περιγραφή (SEO)", name: "description", widget: "text", i18n: true }
+      - { label: "Περιεχόμενο", name: "body", widget: "markdown", i18n: true }
+
+  - name: "posts"
+    label: "Άρθρα"
+    folder: "content/posts"
+    create: true
+    i18n: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string", i18n: true }
+      - { label: "Περίληψη", name: "excerpt", widget: "text", i18n: true }
+      - { label: "Κύρια εικόνα", name: "cover", widget: "image" }
+      - { label: "Περιεχόμενο", name: "body", widget: "markdown", i18n: true }
+
+publish_mode: editorial_workflow
