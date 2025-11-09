@@ -2,19 +2,6 @@ backend:
   name: github
   repo: eliaslep-stack/ildigitalassistant-site
   branch: main
+  client_id: Ov23liNXYufwdJX6brMP
   base_url: https://oauth.ildigitalassistant.com
-  auth_endpoint: /callback
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
-collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "index.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+  auth_endpoint: /api/auth
